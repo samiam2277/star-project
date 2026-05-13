@@ -1,0 +1,41 @@
+{
+  "name": "星语 StellarLog",
+  "short_name": "星语",
+  "description": "海外华人的中英双语灵魂人格平台。灵魂蓝图 · 平行人生 · 潜能雷达 · AI 占星师。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0B14",
+  "theme_color": "#0B0B14",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "今日",
+      "short_name": "今日",
+      "description": "查看今日能量、剧情卡与塔罗",
+      "url": "/today",
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "星盘",
+      "short_name": "星盘",
+      "description": "查看本命盘与 Transit",
+      "url": "/chart",
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "AI 占星师",
+      "short_name": "AI",
+      "description": "与 AI 占星师对话",
+      "url": "/ai",
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
+    }
+  ]
+}

@@ -1,0 +1,1389 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2026-05-12",
+  "schema": "ArchetypeDecisionTree/v1",
+  "thresholds": {
+    "highConfidence": 100,
+    "midConfidence": 60,
+    "lowConfidence": 25,
+    "topGapForHigh": 30,
+    "topGapForMid": 15
+  },
+  "factionFallback": {
+    "rules": [
+      { "sunElement": ["fire"], "moonElement": ["fire", "air"], "faction": "C", "preferredSubThemes": [1, 3, 4, 8] },
+      { "sunElement": ["earth"], "moonElement": ["earth", "water"], "faction": "C", "preferredSubThemes": [2, 6, 7] },
+      { "sunElement": ["air"], "moonElement": ["air", "fire"], "faction": "C", "preferredSubThemes": [7, 11] },
+      { "sunElement": ["air"], "moonElement": ["water"], "faction": "L", "preferredSubThemes": [2, 3, 7] },
+      { "sunElement": ["water"], "moonElement": ["water", "earth"], "faction": "T", "preferredSubThemes": [1, 3, 5, 11] },
+      { "sunElement": ["fire"], "moonElement": ["water"], "faction": "C", "preferredSubThemes": [5, 9] },
+      { "sunElement": ["earth"], "moonElement": ["water"], "faction": "L", "preferredSubThemes": [5, 6, 9] },
+      { "sunElement": ["water"], "moonElement": ["fire"], "faction": "T", "preferredSubThemes": [6, 9] }
+    ]
+  },
+  "rules": [
+    {
+      "id": "C01-P1",
+      "archetypeId": "C01",
+      "type": "primary",
+      "weight": 95,
+      "conditions": { "sunSign": ["Aries"], "marsSign": ["Aries"] },
+      "description": "太阳火星双白羊 = 拓荒者完美锚定"
+    },
+    {
+      "id": "C01-P2",
+      "archetypeId": "C01",
+      "type": "primary",
+      "weight": 80,
+      "conditions": { "sunSign": ["Aries"] },
+      "description": "太阳白羊单独命中"
+    },
+    {
+      "id": "C01-S1",
+      "archetypeId": "C01",
+      "type": "secondary",
+      "weight": 55,
+      "requiresBirthTime": true,
+      "conditions": { "ascSign": ["Aries", "Leo", "Sagittarius"], "marsSign": ["Aries"] },
+      "description": "上升火象 + 火星白羊"
+    },
+    {
+      "id": "C01-S2",
+      "archetypeId": "C01",
+      "type": "secondary",
+      "weight": 40,
+      "conditions": { "marsSign": ["Aries"], "fireEmphasis": true },
+      "description": "火星白羊 + 火象强势"
+    },
+
+    {
+      "id": "C02-P1",
+      "archetypeId": "C02",
+      "type": "primary",
+      "weight": 95,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Taurus"], "moonHouse": [10] },
+      "description": "太阳金牛 + 月落 10 宫"
+    },
+    {
+      "id": "C02-P2",
+      "archetypeId": "C02",
+      "type": "primary",
+      "weight": 85,
+      "conditions": { "sunSign": ["Taurus"], "marsSign": ["Taurus"] },
+      "description": "太阳火星双金牛"
+    },
+    {
+      "id": "C02-P3",
+      "archetypeId": "C02",
+      "type": "primary",
+      "weight": 75,
+      "conditions": { "sunSign": ["Virgo", "Capricorn"], "marsSign": ["Taurus", "Virgo", "Capricorn"] },
+      "description": "土象太阳 + 土象火星"
+    },
+    {
+      "id": "C02-S1",
+      "archetypeId": "C02",
+      "type": "secondary",
+      "weight": 50,
+      "conditions": { "sunSign": ["Taurus"], "earthEmphasis": true },
+      "description": "太阳金牛 + 土象强势"
+    },
+    {
+      "id": "C02-H1",
+      "archetypeId": "C02",
+      "type": "house",
+      "weight": 35,
+      "requiresBirthTime": true,
+      "conditions": { "house10Strong": true, "sunElement": ["earth"] },
+      "description": "10 宫强势 + 土象太阳"
+    },
+
+    {
+      "id": "C03-P1",
+      "archetypeId": "C03",
+      "type": "primary",
+      "weight": 95,
+      "conditions": { "sunSign": ["Leo"], "marsSign": ["Leo"] },
+      "description": "太阳火星双狮子 = 号召者锚定"
+    },
+    {
+      "id": "C03-P2",
+      "archetypeId": "C03",
+      "type": "primary",
+      "weight": 85,
+      "conditions": { "sunSign": ["Leo"], "moonSign": ["Leo"] },
+      "description": "太阳月亮双狮子"
+    },
+    {
+      "id": "C03-S1",
+      "archetypeId": "C03",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "sunSign": ["Leo"], "fireEmphasis": true },
+      "description": "太阳狮子 + 火象强势"
+    },
+    {
+      "id": "C03-S2",
+      "archetypeId": "C03",
+      "type": "secondary",
+      "weight": 50,
+      "conditions": { "marsSign": ["Leo", "Aries", "Sagittarius"], "fireEmphasis": true },
+      "description": "火象火星 + 火象聚集"
+    },
+
+    {
+      "id": "C04-P1",
+      "archetypeId": "C04",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Leo"], "house5Strong": true },
+      "description": "太阳狮子 + 5 宫强势"
+    },
+    {
+      "id": "C04-P2",
+      "archetypeId": "C04",
+      "type": "primary",
+      "weight": 85,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Leo"], "ascSign": ["Leo"] },
+      "description": "太阳上升双狮子"
+    },
+    {
+      "id": "C04-S1",
+      "archetypeId": "C04",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "sunSign": ["Leo"], "venusSign": ["Leo"] },
+      "description": "太阳狮子 + 金星狮子"
+    },
+    {
+      "id": "C04-S2",
+      "archetypeId": "C04",
+      "type": "secondary",
+      "weight": 50,
+      "requiresBirthTime": true,
+      "conditions": { "house5Strong": true, "sunElement": ["fire"] },
+      "description": "5 宫强势 + 火象太阳"
+    },
+
+    {
+      "id": "C05-P1",
+      "archetypeId": "C05",
+      "type": "primary",
+      "weight": 90,
+      "conditions": { "sunSign": ["Sagittarius"], "saturnConjunctSun": true },
+      "description": "太阳射手 + 土星合日"
+    },
+    {
+      "id": "C05-P2",
+      "archetypeId": "C05",
+      "type": "primary",
+      "weight": 80,
+      "conditions": { "sunSign": ["Sagittarius"], "northNodeSign": ["Aries", "Leo", "Sagittarius"] },
+      "description": "太阳射手 + 北交火象"
+    },
+    {
+      "id": "C05-S1",
+      "archetypeId": "C05",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "saturnConjunctSun": true, "sunElement": ["fire"] },
+      "description": "土星合日 + 火象太阳"
+    },
+    {
+      "id": "C05-S2",
+      "archetypeId": "C05",
+      "type": "secondary",
+      "weight": 55,
+      "conditions": { "sunSign": ["Sagittarius"], "saturnSign": ["Sagittarius"] },
+      "description": "太阳射手 + 土星射手"
+    },
+
+    {
+      "id": "C06-P1",
+      "archetypeId": "C06",
+      "type": "primary",
+      "weight": 90,
+      "conditions": { "sunSign": ["Virgo"], "marsSign": ["Virgo"] },
+      "description": "太阳火星双处女 = 雕琢师"
+    },
+    {
+      "id": "C06-P2",
+      "archetypeId": "C06",
+      "type": "primary",
+      "weight": 85,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Virgo"], "moonHouse": [10] },
+      "description": "太阳处女 + 月落 10 宫"
+    },
+    {
+      "id": "C06-S1",
+      "archetypeId": "C06",
+      "type": "secondary",
+      "weight": 50,
+      "conditions": { "sunSign": ["Virgo"], "earthEmphasis": true },
+      "description": "太阳处女 + 土象强势"
+    },
+    {
+      "id": "C06-H1",
+      "archetypeId": "C06",
+      "type": "house",
+      "weight": 40,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Virgo"], "house10Strong": true },
+      "description": "太阳处女 + 10 宫强势"
+    },
+
+    {
+      "id": "C07-P1",
+      "archetypeId": "C07",
+      "type": "primary",
+      "weight": 90,
+      "conditions": { "sunSign": ["Aquarius"], "marsSign": ["Scorpio"] },
+      "description": "太阳水瓶 + 火星天蝎"
+    },
+    {
+      "id": "C07-P2",
+      "archetypeId": "C07",
+      "type": "primary",
+      "weight": 85,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Aquarius"], "ascSign": ["Aquarius"] },
+      "description": "太阳上升双水瓶"
+    },
+    {
+      "id": "C07-S1",
+      "archetypeId": "C07",
+      "type": "secondary",
+      "weight": 50,
+      "conditions": { "sunSign": ["Aquarius"], "airEmphasis": true },
+      "description": "太阳水瓶 + 风象强势"
+    },
+    {
+      "id": "C07-S2",
+      "archetypeId": "C07",
+      "type": "secondary",
+      "weight": 45,
+      "conditions": { "marsSign": ["Scorpio"], "airEmphasis": true },
+      "description": "火星天蝎 + 风象强势"
+    },
+
+    {
+      "id": "C08-P1",
+      "archetypeId": "C08",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Sagittarius"], "house9Strong": true },
+      "description": "太阳射手 + 9 宫强势"
+    },
+    {
+      "id": "C08-P2",
+      "archetypeId": "C08",
+      "type": "primary",
+      "weight": 85,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Sagittarius"], "ascSign": ["Sagittarius"] },
+      "description": "太阳上升双射手"
+    },
+    {
+      "id": "C08-S1",
+      "archetypeId": "C08",
+      "type": "secondary",
+      "weight": 50,
+      "conditions": { "sunSign": ["Sagittarius"], "fireEmphasis": true },
+      "description": "太阳射手 + 火象强势"
+    },
+    {
+      "id": "C08-S2",
+      "archetypeId": "C08",
+      "type": "secondary",
+      "weight": 45,
+      "requiresBirthTime": true,
+      "conditions": { "sunHouse": [9], "marsSign": ["Sagittarius", "Aries"] },
+      "description": "太阳 9 宫 + 火星火象"
+    },
+
+    {
+      "id": "C09-P1",
+      "archetypeId": "C09",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Scorpio"], "marsSign": ["Leo"], "house10Strong": true },
+      "description": "太阳天蝎 + 火星狮子 + 10 宫"
+    },
+    {
+      "id": "C09-P2",
+      "archetypeId": "C09",
+      "type": "primary",
+      "weight": 75,
+      "conditions": { "sunSign": ["Scorpio"], "saturnSquareSun": true },
+      "description": "太阳天蝎 + 土星刑日"
+    },
+    {
+      "id": "C09-S1",
+      "archetypeId": "C09",
+      "type": "secondary",
+      "weight": 55,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Scorpio"], "house10Strong": true },
+      "description": "太阳天蝎 + 10 宫强势"
+    },
+    {
+      "id": "C09-E1",
+      "archetypeId": "C09",
+      "type": "exclusion",
+      "weight": -25,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Scorpio"], "house8Strong": true, "plutoConjunctSun": true },
+      "description": "太阳天蝎 + 8 宫 + 冥王合日 → 削弱(更可能 T03)"
+    },
+
+    {
+      "id": "C10-P1",
+      "archetypeId": "C10",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Pisces"], "moonHouse": [5] },
+      "description": "太阳双鱼 + 月落 5 宫"
+    },
+    {
+      "id": "C10-P2",
+      "archetypeId": "C10",
+      "type": "primary",
+      "weight": 80,
+      "requiresBirthTime": true,
+      "conditions": { "venusSign": ["Cancer", "Pisces"], "house5Strong": true },
+      "description": "金星水象 + 5 宫强势"
+    },
+    {
+      "id": "C10-S1",
+      "archetypeId": "C10",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "sunSign": ["Pisces"], "venusSign": ["Cancer", "Pisces"] },
+      "description": "太阳双鱼 + 金星水象"
+    },
+    {
+      "id": "C10-S2",
+      "archetypeId": "C10",
+      "type": "secondary",
+      "weight": 45,
+      "conditions": { "sunSign": ["Cancer", "Pisces"], "neptuneConjunctSun": true },
+      "description": "水象太阳 + 海王合日"
+    },
+
+    {
+      "id": "C11-P1",
+      "archetypeId": "C11",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Aquarius"], "house9Strong": true },
+      "description": "太阳水瓶 + 9 宫强势"
+    },
+    {
+      "id": "C11-P2",
+      "archetypeId": "C11",
+      "type": "primary",
+      "weight": 75,
+      "conditions": { "northNodeSign": ["Gemini", "Libra", "Aquarius"], "uranusAspect": true },
+      "description": "北交风象 + 天王相位"
+    },
+    {
+      "id": "C11-S1",
+      "archetypeId": "C11",
+      "type": "secondary",
+      "weight": 55,
+      "conditions": { "sunSign": ["Aquarius"], "uranusAspect": true },
+      "description": "太阳水瓶 + 天王相位"
+    },
+    {
+      "id": "C11-E1",
+      "archetypeId": "C11",
+      "type": "exclusion",
+      "weight": -20,
+      "conditions": { "sunSign": ["Aquarius"], "uranusConjunctSun": true },
+      "description": "太阳水瓶 + 天王合日 → 削弱(更可能 T09)"
+    },
+
+    {
+      "id": "C12-P1",
+      "archetypeId": "C12",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Sagittarius"], "moonHouse": [9] },
+      "description": "太阳射手 + 月落 9 宫"
+    },
+    {
+      "id": "C12-P2",
+      "archetypeId": "C12",
+      "type": "primary",
+      "weight": 80,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Sagittarius"], "ascSign": ["Leo"] },
+      "description": "太阳射手 + 上升狮子"
+    },
+    {
+      "id": "C12-S1",
+      "archetypeId": "C12",
+      "type": "secondary",
+      "weight": 55,
+      "conditions": { "sunSign": ["Sagittarius"], "moonSign": ["Pisces"] },
+      "description": "太阳射手 + 月双鱼(神秘远见)"
+    },
+    {
+      "id": "C12-S2",
+      "archetypeId": "C12",
+      "type": "secondary",
+      "weight": 45,
+      "conditions": { "sunSign": ["Sagittarius"], "neptuneConjunctSun": true },
+      "description": "太阳射手 + 海王合日"
+    },
+
+    {
+      "id": "L01-P1",
+      "archetypeId": "L01",
+      "type": "primary",
+      "weight": 95,
+      "conditions": { "sunSign": ["Pisces"], "moonSign": ["Pisces"] },
+      "description": "太阳月亮双双鱼 = 织梦人锚定"
+    },
+    {
+      "id": "L01-P2",
+      "archetypeId": "L01",
+      "type": "primary",
+      "weight": 90,
+      "conditions": { "sunSign": ["Pisces"], "neptuneConjunctSun": true },
+      "description": "太阳双鱼 + 海王合日"
+    },
+    {
+      "id": "L01-S1",
+      "archetypeId": "L01",
+      "type": "secondary",
+      "weight": 70,
+      "conditions": { "sunSign": ["Cancer", "Pisces"], "neptuneConjunctMoon": true },
+      "description": "水象太阳 + 海王合月"
+    },
+    {
+      "id": "L01-S2",
+      "archetypeId": "L01",
+      "type": "secondary",
+      "weight": 50,
+      "conditions": { "sunSign": ["Pisces"], "waterEmphasis": true },
+      "description": "太阳双鱼 + 水象强势"
+    },
+    {
+      "id": "L01-E1",
+      "archetypeId": "L01",
+      "type": "exclusion",
+      "weight": -25,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Pisces"], "house12Strong": true, "plutoConjunctSun": true },
+      "description": "太阳双鱼 + 12 宫 + 冥王合 → 削弱(更可能 T10)"
+    },
+
+    {
+      "id": "L02-P1",
+      "archetypeId": "L02",
+      "type": "primary",
+      "weight": 90,
+      "conditions": { "sunSign": ["Libra"], "mercurySign": ["Libra"] },
+      "description": "太阳水星双天秤"
+    },
+    {
+      "id": "L02-P2",
+      "archetypeId": "L02",
+      "type": "primary",
+      "weight": 85,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Libra"], "ascSign": ["Libra"] },
+      "description": "太阳上升双天秤"
+    },
+    {
+      "id": "L02-S1",
+      "archetypeId": "L02",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "sunSign": ["Libra"], "venusSign": ["Libra", "Taurus"] },
+      "description": "太阳天秤 + 金星归位"
+    },
+    {
+      "id": "L02-S2",
+      "archetypeId": "L02",
+      "type": "secondary",
+      "weight": 50,
+      "conditions": { "sunSign": ["Libra"], "airEmphasis": true },
+      "description": "太阳天秤 + 风象强势"
+    },
+
+    {
+      "id": "L03-P1",
+      "archetypeId": "L03",
+      "type": "primary",
+      "weight": 95,
+      "conditions": { "sunSign": ["Gemini"], "moonSign": ["Libra"] },
+      "description": "太阳双子 + 月天秤"
+    },
+    {
+      "id": "L03-P2",
+      "archetypeId": "L03",
+      "type": "primary",
+      "weight": 80,
+      "conditions": { "sunSign": ["Gemini"], "mercurySign": ["Gemini"] },
+      "description": "太阳水星双双子"
+    },
+    {
+      "id": "L03-S1",
+      "archetypeId": "L03",
+      "type": "secondary",
+      "weight": 55,
+      "conditions": { "sunSign": ["Gemini"], "airEmphasis": true },
+      "description": "太阳双子 + 风象强势"
+    },
+
+    {
+      "id": "L04-P1",
+      "archetypeId": "L04",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Taurus"], "moonSign": ["Leo"], "house5Strong": true },
+      "description": "太阳金牛 + 月狮子 + 5 宫强势"
+    },
+    {
+      "id": "L04-P2",
+      "archetypeId": "L04",
+      "type": "primary",
+      "weight": 80,
+      "conditions": { "sunSign": ["Taurus"], "moonSign": ["Leo"] },
+      "description": "太阳金牛 + 月狮子"
+    },
+    {
+      "id": "L04-S1",
+      "archetypeId": "L04",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "sunSign": ["Taurus"], "venusSign": ["Leo"] },
+      "description": "太阳金牛 + 金星狮子"
+    },
+    {
+      "id": "L04-S2",
+      "archetypeId": "L04",
+      "type": "secondary",
+      "weight": 55,
+      "requiresBirthTime": true,
+      "conditions": { "venusSign": ["Taurus", "Leo", "Libra"], "house5Strong": true },
+      "description": "金星归位 + 5 宫强势"
+    },
+
+    {
+      "id": "L05-P1",
+      "archetypeId": "L05",
+      "type": "primary",
+      "weight": 95,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Cancer"], "moonHouse": [4], "house4Strong": true },
+      "description": "太阳巨蟹 + 月 4 宫 + 4 宫强势"
+    },
+    {
+      "id": "L05-P2",
+      "archetypeId": "L05",
+      "type": "primary",
+      "weight": 80,
+      "conditions": { "sunSign": ["Cancer"], "moonSign": ["Cancer", "Taurus", "Pisces"] },
+      "description": "太阳巨蟹 + 月在土水温润位"
+    },
+    {
+      "id": "L05-S1",
+      "archetypeId": "L05",
+      "type": "secondary",
+      "weight": 45,
+      "conditions": { "sunSign": ["Cancer", "Taurus"], "venusSign": ["Cancer", "Taurus"] },
+      "description": "土水太阳 + 金星归位"
+    },
+    {
+      "id": "L05-H1",
+      "archetypeId": "L05",
+      "type": "house",
+      "weight": 35,
+      "requiresBirthTime": true,
+      "conditions": { "house4Strong": true, "sunElement": ["water"] },
+      "description": "4 宫强势 + 水象太阳"
+    },
+
+    {
+      "id": "L06-P1",
+      "archetypeId": "L06",
+      "type": "primary",
+      "weight": 90,
+      "conditions": { "sunSign": ["Virgo"], "moonSign": ["Pisces"] },
+      "description": "太阳处女 + 月双鱼"
+    },
+    {
+      "id": "L06-P2",
+      "archetypeId": "L06",
+      "type": "primary",
+      "weight": 80,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Virgo"], "house12Strong": true },
+      "description": "太阳处女 + 12 宫强势"
+    },
+    {
+      "id": "L06-S1",
+      "archetypeId": "L06",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "mercurySign": ["Virgo"], "moonSign": ["Pisces"] },
+      "description": "水星处女 + 月双鱼"
+    },
+    {
+      "id": "L06-S2",
+      "archetypeId": "L06",
+      "type": "secondary",
+      "weight": 50,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Virgo"], "moonHouse": [12] },
+      "description": "太阳处女 + 月落 12 宫"
+    },
+
+    {
+      "id": "L07-P1",
+      "archetypeId": "L07",
+      "type": "primary",
+      "weight": 90,
+      "conditions": { "sunSign": ["Libra"], "neptuneConjunctSun": true },
+      "description": "太阳天秤 + 海王合日"
+    },
+    {
+      "id": "L07-P2",
+      "archetypeId": "L07",
+      "type": "primary",
+      "weight": 85,
+      "conditions": { "sunSign": ["Libra"], "moonSign": ["Pisces"] },
+      "description": "太阳天秤 + 月双鱼"
+    },
+    {
+      "id": "L07-S1",
+      "archetypeId": "L07",
+      "type": "secondary",
+      "weight": 55,
+      "conditions": { "moonSign": ["Pisces"], "venusSign": ["Pisces"] },
+      "description": "月双鱼 + 金星双鱼"
+    },
+    {
+      "id": "L07-S2",
+      "archetypeId": "L07",
+      "type": "secondary",
+      "weight": 40,
+      "conditions": { "sunSign": ["Libra"], "waterEmphasis": true },
+      "description": "太阳天秤 + 水象强势"
+    },
+
+    {
+      "id": "L08-P1",
+      "archetypeId": "L08",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Scorpio"], "saturnConjunctSun": true, "house8Strong": true },
+      "description": "太阳天蝎 + 土星合日 + 8 宫"
+    },
+    {
+      "id": "L08-P2",
+      "archetypeId": "L08",
+      "type": "primary",
+      "weight": 80,
+      "conditions": { "sunSign": ["Scorpio"], "saturnConjunctSun": true },
+      "description": "太阳天蝎 + 土星合日"
+    },
+    {
+      "id": "L08-S1",
+      "archetypeId": "L08",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "sunSign": ["Scorpio"], "saturnSign": ["Scorpio"] },
+      "description": "太阳天蝎 + 土星天蝎"
+    },
+    {
+      "id": "L08-E1",
+      "archetypeId": "L08",
+      "type": "exclusion",
+      "weight": -25,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Scorpio"], "marsSign": ["Leo"], "house10Strong": true },
+      "description": "太阳天蝎 + 火星狮子 + 10 宫 → 削弱(更可能 C09)"
+    },
+
+    {
+      "id": "L09-P1",
+      "archetypeId": "L09",
+      "type": "primary",
+      "weight": 95,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Cancer"], "moonSign": ["Pisces"], "house12Strong": true },
+      "description": "太阳巨蟹 + 月双鱼 + 12 宫强势"
+    },
+    {
+      "id": "L09-P2",
+      "archetypeId": "L09",
+      "type": "primary",
+      "weight": 85,
+      "conditions": { "sunSign": ["Cancer"], "moonSign": ["Pisces"] },
+      "description": "太阳巨蟹 + 月双鱼"
+    },
+    {
+      "id": "L09-S1",
+      "archetypeId": "L09",
+      "type": "secondary",
+      "weight": 55,
+      "conditions": { "sunSign": ["Cancer", "Pisces"], "venusSign": ["Cancer", "Pisces"] },
+      "description": "水象太阳 + 金星水象"
+    },
+    {
+      "id": "L09-S2",
+      "archetypeId": "L09",
+      "type": "secondary",
+      "weight": 75,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Cancer"], "moonHouse": [12] },
+      "description": "太阳巨蟹 + 月落 12 宫"
+    },
+
+    {
+      "id": "L10-P1",
+      "archetypeId": "L10",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Gemini"], "mercurySign": ["Gemini"], "house3Strong": true },
+      "description": "太阳水星双双子 + 3 宫强势"
+    },
+    {
+      "id": "L10-P2",
+      "archetypeId": "L10",
+      "type": "primary",
+      "weight": 70,
+      "conditions": { "sunSign": ["Gemini"], "mercurySign": ["Gemini"], "airEmphasis": true },
+      "description": "太阳水星双双子 + 风象强势"
+    },
+    {
+      "id": "L10-S1",
+      "archetypeId": "L10",
+      "type": "secondary",
+      "weight": 50,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Gemini"], "mercuryHouse": [3] },
+      "description": "太阳双子 + 水星 3 宫"
+    },
+    {
+      "id": "L10-E1",
+      "archetypeId": "L10",
+      "type": "exclusion",
+      "weight": -25,
+      "conditions": { "sunSign": ["Gemini"], "moonSign": ["Libra"] },
+      "description": "太阳双子 + 月天秤 → 削弱(更可能 L03)"
+    },
+
+    {
+      "id": "L11-P1",
+      "archetypeId": "L11",
+      "type": "primary",
+      "weight": 95,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Taurus"], "moonSign": ["Libra"], "house7Strong": true },
+      "description": "太阳金牛 + 月天秤 + 7 宫强势"
+    },
+    {
+      "id": "L11-P2",
+      "archetypeId": "L11",
+      "type": "primary",
+      "weight": 80,
+      "conditions": { "sunSign": ["Taurus"], "moonSign": ["Libra"] },
+      "description": "太阳金牛 + 月天秤"
+    },
+    {
+      "id": "L11-S1",
+      "archetypeId": "L11",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "sunSign": ["Taurus"], "venusSign": ["Libra"] },
+      "description": "太阳金牛 + 金星天秤"
+    },
+    {
+      "id": "L11-S2",
+      "archetypeId": "L11",
+      "type": "secondary",
+      "weight": 50,
+      "conditions": { "venusSign": ["Libra"], "sunElement": ["earth"] },
+      "description": "金星天秤 + 土象太阳"
+    },
+
+    {
+      "id": "L12-P1",
+      "archetypeId": "L12",
+      "type": "primary",
+      "weight": 85,
+      "conditions": { "sunSign": ["Libra"], "northNodeSign": ["Sagittarius", "Aries", "Leo"] },
+      "description": "太阳天秤 + 北交火象"
+    },
+    {
+      "id": "L12-P2",
+      "archetypeId": "L12",
+      "type": "primary",
+      "weight": 80,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Libra"], "northNodeHouse": [9] },
+      "description": "太阳天秤 + 北交 9 宫"
+    },
+    {
+      "id": "L12-S1",
+      "archetypeId": "L12",
+      "type": "secondary",
+      "weight": 50,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Libra"], "sunHouse": [9] },
+      "description": "太阳天秤 + 太阳 9 宫"
+    },
+    {
+      "id": "L12-S2",
+      "archetypeId": "L12",
+      "type": "secondary",
+      "weight": 45,
+      "conditions": { "sunSign": ["Libra"], "mercurySign": ["Sagittarius"] },
+      "description": "太阳天秤 + 水星射手(领导但善听)"
+    },
+
+    {
+      "id": "T01-P1",
+      "archetypeId": "T01",
+      "type": "primary",
+      "weight": 100,
+      "conditions": { "sunSign": ["Scorpio"], "moonSign": ["Scorpio"] },
+      "description": "太阳月亮双天蝎 = 深潜者完美锚定"
+    },
+    {
+      "id": "T01-P2",
+      "archetypeId": "T01",
+      "type": "primary",
+      "weight": 85,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Scorpio"], "house8Strong": true },
+      "description": "太阳天蝎 + 8 宫强势"
+    },
+    {
+      "id": "T01-P3",
+      "archetypeId": "T01",
+      "type": "primary",
+      "weight": 75,
+      "conditions": { "sunSign": ["Pisces"], "moonSign": ["Scorpio"] },
+      "description": "太阳双鱼 + 月天蝎"
+    },
+    {
+      "id": "T01-S1",
+      "archetypeId": "T01",
+      "type": "secondary",
+      "weight": 50,
+      "conditions": { "sunSign": ["Cancer", "Pisces"], "plutoConjunctSun": true },
+      "description": "水象太阳 + 冥王合相"
+    },
+    {
+      "id": "T01-A1",
+      "archetypeId": "T01",
+      "type": "aspect",
+      "weight": 35,
+      "conditions": { "plutoConjunctMoon": true, "sunSign": ["Scorpio", "Cancer", "Pisces"] },
+      "description": "冥王合月 + 水象太阳"
+    },
+    {
+      "id": "T01-E1",
+      "archetypeId": "T01",
+      "type": "exclusion",
+      "weight": -30,
+      "requiresBirthTime": true,
+      "conditions": { "ascSign": ["Aries", "Sagittarius"], "fireEmphasis": true },
+      "description": "上升火象 + 火象强势 → 削弱"
+    },
+    {
+      "id": "T01-A2",
+      "archetypeId": "T01",
+      "type": "aspect",
+      "weight": 45,
+      "conditions": { "plutoMajorAspectSun": true, "sunSign": ["Scorpio", "Cancer", "Pisces"] },
+      "description": "冥王与日 major aspect + 水象太阳"
+    },
+
+    {
+      "id": "T02-P1",
+      "archetypeId": "T02",
+      "type": "primary",
+      "weight": 90,
+      "conditions": { "sunSign": ["Aquarius"], "neptuneConjunctSun": true },
+      "description": "太阳水瓶 + 海王合日"
+    },
+    {
+      "id": "T02-P2",
+      "archetypeId": "T02",
+      "type": "primary",
+      "weight": 85,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Aquarius"], "moonHouse": [12] },
+      "description": "太阳水瓶 + 月落 12 宫"
+    },
+    {
+      "id": "T02-S1",
+      "archetypeId": "T02",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "sunSign": ["Aquarius"], "neptuneConjunctMoon": true },
+      "description": "太阳水瓶 + 海王合月"
+    },
+    {
+      "id": "T02-E1",
+      "archetypeId": "T02",
+      "type": "exclusion",
+      "weight": -20,
+      "conditions": { "sunSign": ["Aquarius"], "uranusConjunctSun": true },
+      "description": "太阳水瓶 + 天王合日 → 削弱(更可能 T09)"
+    },
+    {
+      "id": "T02-A1",
+      "archetypeId": "T02",
+      "type": "aspect",
+      "weight": 60,
+      "conditions": { "sunSign": ["Aquarius"], "neptuneMajorAspectSun": true },
+      "description": "太阳水瓶 + 海王与日 major aspect"
+    },
+
+    {
+      "id": "T03-P1",
+      "archetypeId": "T03",
+      "type": "primary",
+      "weight": 95,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Scorpio"], "plutoConjunctSun": true, "house8Strong": true },
+      "description": "太阳天蝎 + 冥王合日 + 8 宫 = 炼金师锚定"
+    },
+    {
+      "id": "T03-P2",
+      "archetypeId": "T03",
+      "type": "primary",
+      "weight": 85,
+      "conditions": { "sunSign": ["Scorpio"], "plutoConjunctSun": true },
+      "description": "太阳天蝎 + 冥王合日"
+    },
+    {
+      "id": "T03-S1",
+      "archetypeId": "T03",
+      "type": "secondary",
+      "weight": 65,
+      "conditions": { "sunSign": ["Scorpio", "Capricorn"], "plutoConjunctSun": true },
+      "description": "天蝎/摩羯太阳 + 冥王合日"
+    },
+    {
+      "id": "T03-A1",
+      "archetypeId": "T03",
+      "type": "aspect",
+      "weight": 70,
+      "conditions": { "sunSign": ["Scorpio"], "plutoMajorAspectSun": true },
+      "description": "太阳天蝎 + 冥王与日 major aspect"
+    },
+    {
+      "id": "T03-A2",
+      "archetypeId": "T03",
+      "type": "aspect",
+      "weight": 40,
+      "conditions": { "plutoConjunctSun": true },
+      "description": "冥王合日(任意太阳)"
+    },
+
+    {
+      "id": "T04-P1",
+      "archetypeId": "T04",
+      "type": "primary",
+      "weight": 95,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Virgo"], "plutoConjunctSun": true, "house8Strong": true },
+      "description": "太阳处女 + 冥王合日 + 8 宫 = 解秘者"
+    },
+    {
+      "id": "T04-P2",
+      "archetypeId": "T04",
+      "type": "primary",
+      "weight": 80,
+      "conditions": { "sunSign": ["Virgo"], "plutoConjunctSun": true },
+      "description": "太阳处女 + 冥王合日"
+    },
+    {
+      "id": "T04-S1",
+      "archetypeId": "T04",
+      "type": "secondary",
+      "weight": 60,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Virgo"], "house8Strong": true },
+      "description": "太阳处女 + 8 宫强势"
+    },
+    {
+      "id": "T04-A1",
+      "archetypeId": "T04",
+      "type": "aspect",
+      "weight": 65,
+      "conditions": { "sunSign": ["Virgo"], "plutoMajorAspectSun": true },
+      "description": "太阳处女 + 冥王与日 major aspect"
+    },
+    {
+      "id": "T04-A2",
+      "archetypeId": "T04",
+      "type": "aspect",
+      "weight": 45,
+      "requiresBirthTime": true,
+      "conditions": { "plutoConjunctSun": true, "house8Strong": true },
+      "description": "冥王合日 + 8 宫强势(任意太阳)"
+    },
+
+    {
+      "id": "T05-P1",
+      "archetypeId": "T05",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Scorpio"], "saturnConjunctSun": true, "house4Strong": true },
+      "description": "太阳天蝎 + 土星合日 + 4 宫"
+    },
+    {
+      "id": "T05-P2",
+      "archetypeId": "T05",
+      "type": "primary",
+      "weight": 70,
+      "conditions": { "sunSign": ["Scorpio"], "saturnConjunctSun": true },
+      "description": "太阳天蝎 + 土星合日"
+    },
+    {
+      "id": "T05-S1",
+      "archetypeId": "T05",
+      "type": "secondary",
+      "weight": 55,
+      "conditions": { "sunSign": ["Scorpio"], "saturnSign": ["Scorpio"] },
+      "description": "太阳天蝎 + 土星天蝎"
+    },
+    {
+      "id": "T05-E1",
+      "archetypeId": "T05",
+      "type": "exclusion",
+      "weight": -25,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Scorpio"], "house8Strong": true },
+      "description": "太阳天蝎 + 8 宫 → 削弱(更可能 L08)"
+    },
+
+    {
+      "id": "T06-P1",
+      "archetypeId": "T06",
+      "type": "primary",
+      "weight": 90,
+      "conditions": { "sunSign": ["Sagittarius"], "neptuneConjunctSun": true },
+      "description": "太阳射手 + 海王合日"
+    },
+    {
+      "id": "T06-P2",
+      "archetypeId": "T06",
+      "type": "primary",
+      "weight": 85,
+      "conditions": { "sunSign": ["Sagittarius"], "moonSign": ["Pisces"] },
+      "description": "太阳射手 + 月双鱼"
+    },
+    {
+      "id": "T06-S1",
+      "archetypeId": "T06",
+      "type": "secondary",
+      "weight": 70,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Sagittarius"], "house9Strong": true, "neptuneConjunctSun": true },
+      "description": "太阳射手 + 9 宫 + 海王合日"
+    },
+    {
+      "id": "T06-A1",
+      "archetypeId": "T06",
+      "type": "aspect",
+      "weight": 65,
+      "conditions": { "sunSign": ["Sagittarius"], "neptuneMajorAspectSun": true },
+      "description": "太阳射手 + 海王与日 major aspect"
+    },
+
+    {
+      "id": "T07-P1",
+      "archetypeId": "T07",
+      "type": "primary",
+      "weight": 95,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Capricorn"], "marsSign": ["Capricorn"], "house10Strong": true },
+      "description": "太阳火星双摩羯 + 10 宫 = 淬火者锚定"
+    },
+    {
+      "id": "T07-P2",
+      "archetypeId": "T07",
+      "type": "primary",
+      "weight": 85,
+      "conditions": { "sunSign": ["Capricorn"], "marsSign": ["Capricorn"] },
+      "description": "太阳火星双摩羯"
+    },
+    {
+      "id": "T07-S1",
+      "archetypeId": "T07",
+      "type": "secondary",
+      "weight": 65,
+      "conditions": { "sunSign": ["Capricorn"], "saturnConjunctSun": true },
+      "description": "太阳摩羯 + 土星合日"
+    },
+
+    {
+      "id": "T08-P1",
+      "archetypeId": "T08",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Capricorn"], "moonHouse": [12] },
+      "description": "太阳摩羯 + 月落 12 宫"
+    },
+    {
+      "id": "T08-P2",
+      "archetypeId": "T08",
+      "type": "primary",
+      "weight": 80,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Capricorn"], "house12Strong": true },
+      "description": "太阳摩羯 + 12 宫强势"
+    },
+    {
+      "id": "T08-S1",
+      "archetypeId": "T08",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "sunSign": ["Capricorn"], "moonSign": ["Pisces"] },
+      "description": "太阳摩羯 + 月双鱼"
+    },
+
+    {
+      "id": "T09-P1",
+      "archetypeId": "T09",
+      "type": "primary",
+      "weight": 95,
+      "conditions": { "sunSign": ["Aquarius"], "uranusConjunctSun": true },
+      "description": "太阳水瓶 + 天王合日 = 启示者锚定"
+    },
+    {
+      "id": "T09-P2",
+      "archetypeId": "T09",
+      "type": "primary",
+      "weight": 80,
+      "conditions": { "sunSign": ["Aquarius"], "uranusAspect": true },
+      "description": "太阳水瓶 + 天王相位"
+    },
+    {
+      "id": "T09-S1",
+      "archetypeId": "T09",
+      "type": "secondary",
+      "weight": 60,
+      "conditions": { "uranusConjunctSun": true, "airEmphasis": true },
+      "description": "天王合日 + 风象强势"
+    },
+    {
+      "id": "T09-A1",
+      "archetypeId": "T09",
+      "type": "aspect",
+      "weight": 70,
+      "conditions": { "sunSign": ["Aquarius"], "uranusMajorAspectSun": true },
+      "description": "太阳水瓶 + 天王与日 major aspect"
+    },
+    {
+      "id": "T09-A2",
+      "archetypeId": "T09",
+      "type": "aspect",
+      "weight": 60,
+      "conditions": { "sunSign": ["Leo"], "uranusMajorAspectSun": true },
+      "description": "太阳狮子 + 天王与日 major aspect"
+    },
+    {
+      "id": "T09-A3",
+      "archetypeId": "T09",
+      "type": "aspect",
+      "weight": 50,
+      "conditions": { "uranusConjunctSun": true },
+      "description": "天王合日(任意太阳)"
+    },
+    {
+      "id": "T09-A4",
+      "archetypeId": "T09",
+      "type": "aspect",
+      "weight": 45,
+      "conditions": { "uranusMajorAspectSun": true, "airEmphasis": true },
+      "description": "天王 major aspect + 风象强势"
+    },
+    {
+      "id": "T09-A5",
+      "archetypeId": "T09",
+      "type": "aspect",
+      "weight": 35,
+      "conditions": { "uranusMajorAspectSun": true },
+      "description": "天王与日 major aspect(任意太阳)"
+    },
+    {
+      "id": "T09-A6",
+      "archetypeId": "T09",
+      "type": "aspect",
+      "weight": 50,
+      "conditions": { "sunSign": ["Leo", "Aquarius"], "uranusMajorAspectMoon": true },
+      "description": "太阳狮子/水瓶 + 天王与月 major aspect"
+    },
+
+    {
+      "id": "T10-P1",
+      "archetypeId": "T10",
+      "type": "primary",
+      "weight": 95,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Pisces"], "plutoConjunctSun": true, "house12Strong": true },
+      "description": "太阳双鱼 + 冥王合日 + 12 宫 = 招魂者锚定"
+    },
+    {
+      "id": "T10-P2",
+      "archetypeId": "T10",
+      "type": "primary",
+      "weight": 80,
+      "conditions": { "sunSign": ["Pisces"], "plutoConjunctSun": true },
+      "description": "太阳双鱼 + 冥王合日"
+    },
+    {
+      "id": "T10-S1",
+      "archetypeId": "T10",
+      "type": "secondary",
+      "weight": 55,
+      "conditions": { "sunSign": ["Cancer", "Pisces"], "plutoConjunctMoon": true },
+      "description": "水象太阳 + 冥王合月"
+    },
+    {
+      "id": "T10-A1",
+      "archetypeId": "T10",
+      "type": "aspect",
+      "weight": 70,
+      "conditions": { "sunSign": ["Pisces"], "plutoMajorAspectSun": true },
+      "description": "太阳双鱼 + 冥王与日 major aspect"
+    },
+    {
+      "id": "T10-A2",
+      "archetypeId": "T10",
+      "type": "aspect",
+      "weight": 45,
+      "requiresBirthTime": true,
+      "conditions": { "plutoConjunctSun": true, "house12Strong": true },
+      "description": "冥王合日 + 12 宫强势(任意太阳)"
+    },
+
+    {
+      "id": "T11-P1",
+      "archetypeId": "T11",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Virgo"], "house8Strong": true, "earthEmphasis": true },
+      "description": "太阳处女 + 8 宫 + 土象强势"
+    },
+    {
+      "id": "T11-P2",
+      "archetypeId": "T11",
+      "type": "primary",
+      "weight": 85,
+      "conditions": { "sunSign": ["Virgo"], "plutoConjunctSun": true, "earthEmphasis": true },
+      "description": "太阳处女 + 冥王合日 + 土象强势"
+    },
+    {
+      "id": "T11-S1",
+      "archetypeId": "T11",
+      "type": "secondary",
+      "weight": 60,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Virgo"], "house8Strong": true },
+      "description": "太阳处女 + 8 宫强势"
+    },
+    {
+      "id": "T11-E1",
+      "archetypeId": "T11",
+      "type": "exclusion",
+      "weight": -20,
+      "conditions": { "sunSign": ["Virgo"], "plutoConjunctSun": true, "mercurySign": ["Virgo"] },
+      "description": "太阳处女 + 冥王合日 + 水星处女 → 削弱(更可能 T04)"
+    },
+    {
+      "id": "T11-A1",
+      "archetypeId": "T11",
+      "type": "aspect",
+      "weight": 65,
+      "conditions": { "sunSign": ["Taurus", "Virgo", "Capricorn"], "plutoMajorAspectSun": true, "earthEmphasis": true },
+      "description": "土象太阳 + 冥王 major aspect + 土象强势"
+    },
+    {
+      "id": "T11-A2",
+      "archetypeId": "T11",
+      "type": "aspect",
+      "weight": 55,
+      "conditions": { "sunSign": ["Virgo", "Taurus"], "plutoMajorAspectSun": true },
+      "description": "太阳处女/金牛 + 冥王 major aspect"
+    },
+    {
+      "id": "T11-A3",
+      "archetypeId": "T11",
+      "type": "aspect",
+      "weight": 40,
+      "requiresBirthTime": true,
+      "conditions": { "plutoConjunctSun": true, "house8Strong": true },
+      "description": "冥王合日 + 8 宫强势(任意太阳)"
+    },
+    {
+      "id": "T11-A4",
+      "archetypeId": "T11",
+      "type": "aspect",
+      "weight": 70,
+      "conditions": { "sunSign": ["Taurus", "Virgo", "Capricorn"], "plutoConjunctSun": true },
+      "description": "土象太阳 + 冥王合日"
+    },
+
+    {
+      "id": "T12-P1",
+      "archetypeId": "T12",
+      "type": "primary",
+      "weight": 90,
+      "requiresBirthTime": true,
+      "conditions": { "sunSign": ["Pisces"], "plutoConjunctSun": true, "northNodeHouse": [12] },
+      "description": "太阳双鱼 + 冥王合日 + 北交 12 宫"
+    },
+    {
+      "id": "T12-P2",
+      "archetypeId": "T12",
+      "type": "primary",
+      "weight": 75,
+      "conditions": { "sunSign": ["Pisces"], "plutoConjunctSun": true, "northNodeSign": ["Pisces"] },
+      "description": "太阳双鱼 + 冥王合日 + 北交双鱼"
+    },
+    {
+      "id": "T12-S1",
+      "archetypeId": "T12",
+      "type": "secondary",
+      "weight": 55,
+      "conditions": { "sunSign": ["Pisces"], "moonSign": ["Pisces", "Scorpio"], "neptuneConjunctSun": true },
+      "description": "太阳双鱼 + 水象月 + 海王合日(渡舟人变体)"
+    },
+    {
+      "id": "T12-A1",
+      "archetypeId": "T12",
+      "type": "aspect",
+      "weight": 65,
+      "conditions": { "sunSign": ["Pisces"], "plutoMajorAspectSun": true },
+      "description": "太阳双鱼 + 冥王与日 major aspect"
+    }
+  ]
+}

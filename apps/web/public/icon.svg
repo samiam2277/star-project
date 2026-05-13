@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512">
+      <stop offset="0%" stop-color="#0B0B14"/>
+      <stop offset="100%" stop-color="#15151F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C9A876" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#C9A876" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#C9A876" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
+
+  <!-- 中心柔光 -->
+  <circle cx="256" cy="256" r="150" fill="url(#glow)"/>
+
+  <!-- 外轨道环 -->
+  <circle cx="256" cy="256" r="172" fill="none" stroke="#C9A876" stroke-width="2" opacity="0.28"/>
+  <!-- 外轨道缺口装饰 -->
+  <circle cx="256" cy="256" r="172" fill="none" stroke="#C9A876" stroke-width="3" stroke-dasharray="56 248" opacity="0.55" transform="rotate(-18 256 256)"/>
+
+  <!-- 内虚线轨道 -->
+  <circle cx="256" cy="256" r="122" fill="none" stroke="#C9A876" stroke-width="1.5" stroke-dasharray="5 9" opacity="0.2" transform="rotate(36 256 256)"/>
+
+  <!-- 四角方位星点 -->
+  <circle cx="370" cy="142" r="5.5" fill="#C9A876" opacity="0.65"/>
+  <circle cx="370" cy="370" r="5.5" fill="#C9A876" opacity="0.65"/>
+  <circle cx="142" cy="370" r="5.5" fill="#C9A876" opacity="0.65"/>
+  <circle cx="142" cy="142" r="5.5" fill="#C9A876" opacity="0.65"/>
+
+  <!-- 主星芒 (Sparkle) -->
+  <path d="M256 92 L332 180 L420 256 L332 332 L256 420 L180 332 L92 256 L180 180 Z" fill="#C9A876" filter="url(#shadow)"/>
+
+  <!-- 核心白点 -->
+  <circle cx="256" cy="256" r="13" fill="#F4EDE0"/>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "星语 StellarLog — 看见你尚未激活的自己",
+    "description": "海外华人的中英双语灵魂人格平台。灵魂蓝图 · 平行人生 · 潜能雷达 · AI 占星师。"
+  },
+  "nav": {
+    "today": "今日",
+    "chart": "星盘",
+    "ai": "AI 占星师",
+    "tarot": "塔罗",
+    "me": "我"
+  },
+  "home": {
+    "heroTitle": "你的星盘藏着你尚未激活的版本",
+    "heroSubtitle": "输入你的生日，30 秒看你的天命原型",
+    "ctaStart": "开始探索",
+    "ctaShare": "分享我的原型"
+  },
+  "blueprint": {
+    "title": "我的灵魂蓝图"
+  }
+}

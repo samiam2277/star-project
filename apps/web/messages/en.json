@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "StellarLog — See the version of you that hasn't woken up yet",
+    "description": "A bilingual soul archetype platform for global Chinese. Soul Blueprint · Parallel Lives · Potential Radar · AI Astrologer."
+  },
+  "nav": {
+    "today": "Today",
+    "chart": "Chart",
+    "ai": "AI Astrologer",
+    "tarot": "Tarot",
+    "me": "Me"
+  },
+  "home": {
+    "heroTitle": "Your chart holds the version of you that hasn't woken up yet",
+    "heroSubtitle": "Enter your birthday. See your Soul Archetype in 30 seconds.",
+    "ctaStart": "Start Exploring",
+    "ctaShare": "Share My Archetype"
+  },
+  "blueprint": {
+    "title": "My Soul Blueprint"
+  }
+}

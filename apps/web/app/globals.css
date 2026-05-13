@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@layer base {
+  :root {
+    --bg-deep: #0B0B14;
+    --bg-space: #11111C;
+    --bg-card: #15151F;
+    --bg-elevated: #1C1C28;
+    --fg-primary: #F4EDE0;
+    --fg-secondary: #C7C2B8;
+    --fg-dim: #8A8595;
+    --accent-gold: #C9A876;
+    --accent-gold-deep: #9C7E4E;
+    --accent-purple: #6B5B95;
+    --accent-purple-deep: #4A3F6B;
+
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--bg-deep);
+    color: var(--fg-primary);
+    font-family: 'Inter Variable', 'PingFang SC', system-ui, sans-serif;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

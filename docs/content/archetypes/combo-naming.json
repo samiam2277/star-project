@@ -1,0 +1,310 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2026-05-12",
+  "schema": "see docs/content/archetypes/05-combo-naming.md §7.1",
+
+  "selfMatch": {
+    "C01": {
+      "titleZh": "拓荒共振",
+      "titleEn": "Trail Echo",
+      "taglineZh": "你的开荒本能在今年加倍发声",
+      "taglineEn": "Your pioneering instinct doubles down this year"
+    },
+    "C02": {
+      "titleZh": "匠心叠刻",
+      "titleEn": "Craft Echo",
+      "taglineZh": "把同一件作品再雕一层",
+      "taglineEn": "Re-carve the same piece, deeper"
+    },
+    "C03": {
+      "titleZh": "号召加倍",
+      "titleEn": "Vanguard Encore",
+      "taglineZh": "今年的旗帜比过去更大更鲜明",
+      "taglineEn": "Your banner flies higher than ever"
+    },
+    "C04": {
+      "titleZh": "双重舞台",
+      "titleEn": "Twin Stages",
+      "taglineZh": "一个舞台不够,今年有两个",
+      "taglineEn": "One stage isn't enough this year"
+    },
+    "C05": {
+      "titleZh": "持戒之年",
+      "titleEn": "Oath Renewed",
+      "taglineZh": "再次为同一个承诺续约",
+      "taglineEn": "Renew your vow to the same promise"
+    },
+    "C06": {
+      "titleZh": "细刻自己",
+      "titleEn": "Inner Carving",
+      "taglineZh": "今年的细节是你自己",
+      "taglineEn": "The fine work this year is on yourself"
+    },
+    "C07": {
+      "titleZh": "再造结构",
+      "titleEn": "Reshape Encore",
+      "taglineZh": "把上一版结构推翻重来",
+      "taglineEn": "Demolish last year's structure, redesign"
+    },
+    "C08": {
+      "titleZh": "远征更远",
+      "titleEn": "Further Way",
+      "taglineZh": "你的远方还没到尽头",
+      "taglineEn": "Your distance hasn't reached its edge"
+    },
+    "C09": {
+      "titleZh": "再次重铸",
+      "titleEn": "Forge Again",
+      "taglineZh": "摧毁是为了第二次再造",
+      "taglineEn": "Destroy again, to forge again"
+    },
+    "C10": {
+      "titleZh": "双声共谱",
+      "titleEn": "Twin Verses",
+      "taglineZh": "把同一首歌唱出两段声部",
+      "taglineEn": "Same song, second voice"
+    },
+    "C11": {
+      "titleZh": "再次开蒙",
+      "titleEn": "Second Dawn",
+      "taglineZh": "你点亮的人还没看够",
+      "taglineEn": "The eyes you lit are still hungry"
+    },
+    "C12": {
+      "titleZh": "远望更远",
+      "titleEn": "Wider Sky",
+      "taglineZh": "你看到的天空,今年要再宽一格",
+      "taglineEn": "Your sky widens another notch"
+    },
+
+    "L01": {
+      "titleZh": "双梦交织",
+      "titleEn": "Dream Echo",
+      "taglineZh": "旧梦未醒,新梦已织",
+      "taglineEn": "Old dream not yet faded, new one already woven"
+    },
+    "L02": {
+      "titleZh": "再调一次",
+      "titleEn": "Re-Tune",
+      "taglineZh": "上一次的平衡需要再校一次",
+      "taglineEn": "Last year's balance needs retuning"
+    },
+    "L03": {
+      "titleZh": "双桥并立",
+      "titleEn": "Twin Bridges",
+      "taglineZh": "同时维护两条联结",
+      "taglineEn": "Tend two bridges at once"
+    },
+    "L04": {
+      "titleZh": "盛宴叠席",
+      "titleEn": "Festal Echo",
+      "taglineZh": "今年的桌比去年长一倍",
+      "taglineEn": "This year's table runs twice as long"
+    },
+    "L05": {
+      "titleZh": "守护加深",
+      "titleEn": "Deeper Guard",
+      "taglineZh": "你护着的人需要你更稳一些",
+      "taglineEn": "The one you guard needs you steadier"
+    },
+    "L06": {
+      "titleZh": "深度聆听",
+      "titleEn": "Deeper Listening",
+      "taglineZh": "今年要听到沉默的下面",
+      "taglineEn": "This year, hear below the silence"
+    },
+    "L07": {
+      "titleZh": "双重共鸣",
+      "titleEn": "Twin Resonance",
+      "taglineZh": "你和这个人会再次共振",
+      "taglineEn": "You'll resonate with this person again"
+    },
+    "L08": {
+      "titleZh": "再次见证",
+      "titleEn": "Witness Again",
+      "taglineZh": "该到场的事再次到场",
+      "taglineEn": "Be present, again, where presence matters"
+    },
+    "L09": {
+      "titleZh": "慰藉之年",
+      "titleEn": "Year of Comfort",
+      "taglineZh": "今年你的怀抱被人需要",
+      "taglineEn": "Your arms are needed this year"
+    },
+    "L10": {
+      "titleZh": "再次串联",
+      "titleEn": "Re-Link",
+      "taglineZh": "把上次断的线接回来",
+      "taglineEn": "Rejoin what was cut"
+    },
+    "L11": {
+      "titleZh": "拥抱加倍",
+      "titleEn": "Wider Embrace",
+      "taglineZh": "你能容纳的范围今年再扩一圈",
+      "taglineEn": "Your embrace extends another ring"
+    },
+    "L12": {
+      "titleZh": "再走前一步",
+      "titleEn": "Step Further",
+      "taglineZh": "不命令,只是再往前半步",
+      "taglineEn": "No command, just half a step further"
+    },
+
+    "T01": {
+      "titleZh": "再下一潜",
+      "titleEn": "Deeper Dive",
+      "taglineZh": "你以为见底了,其实还有一层",
+      "taglineEn": "You thought you hit bottom — there's another layer"
+    },
+    "T02": {
+      "titleZh": "再点一盏",
+      "titleEn": "Another Flame",
+      "taglineZh": "上一盏快灭了,今年再点一盏",
+      "taglineEn": "Last flame is fading, light another"
+    },
+    "T03": {
+      "titleZh": "再炼一次",
+      "titleEn": "Re-Forge Gold",
+      "taglineZh": "上一炉的金还不够纯",
+      "taglineEn": "Last batch isn't pure enough yet"
+    },
+    "T04": {
+      "titleZh": "破解再来",
+      "titleEn": "Cipher Again",
+      "taglineZh": "同一个谜面,今年看见另一层",
+      "taglineEn": "Same riddle, second layer"
+    },
+    "T05": {
+      "titleZh": "二度蜕变",
+      "titleEn": "Second Molt",
+      "taglineZh": "上一次的蜕只是热身",
+      "taglineEn": "Last molting was just the warm-up"
+    },
+    "T06": {
+      "titleZh": "更远的远观",
+      "titleEn": "Further Sight",
+      "taglineZh": "你看的不是来年,是来年的来年",
+      "taglineEn": "Not next year — the year after next"
+    },
+    "T07": {
+      "titleZh": "再淬一次",
+      "titleEn": "Another Forge",
+      "taglineZh": "火热得正好,这次不再退",
+      "taglineEn": "The forge runs hot — don't pull back"
+    },
+    "T08": {
+      "titleZh": "夜中再夜",
+      "titleEn": "Deeper Night",
+      "taglineZh": "你已熬过一个长夜,还有更长的等着",
+      "taglineEn": "One long night survived, longer one ahead"
+    },
+    "T09": {
+      "titleZh": "闪电再临",
+      "titleEn": "Another Flash",
+      "taglineZh": "又一次闪电,这次轮到你给别人",
+      "taglineEn": "Lightning again — this time, you're the strike"
+    },
+    "T10": {
+      "titleZh": "再次招魂",
+      "titleEn": "Call Again",
+      "taglineZh": "上次没叫回来的,今年再叫一次",
+      "taglineEn": "The one you didn't recall, call again"
+    },
+    "T11": {
+      "titleZh": "再掘一井",
+      "titleEn": "Deeper Well",
+      "taglineZh": "上一口的水位还没到底",
+      "taglineEn": "The last well isn't yet at its true bottom"
+    },
+    "T12": {
+      "titleZh": "再渡一程",
+      "titleEn": "Another Crossing",
+      "taglineZh": "那条河有第二段,你要再撑一次篙",
+      "taglineEn": "The river has a second bend — pole through it"
+    }
+  },
+
+  "factionPairs": {
+    "CC": {
+      "pairCode": "CC",
+      "natalFaction": "C",
+      "annualFaction": "C",
+      "templateZh": "{N}・转向{A}",
+      "templateEn": "{N} into {A}",
+      "taglineZh": "在创造的同一道路上换工具",
+      "taglineEn": "Same road of making, different tool"
+    },
+    "LL": {
+      "pairCode": "LL",
+      "natalFaction": "L",
+      "annualFaction": "L",
+      "templateZh": "{N}的{A}季",
+      "templateEn": "Season of {N}-{A}",
+      "taglineZh": "关系深化的同源延伸",
+      "taglineEn": "Connection deepening, same key"
+    },
+    "TT": {
+      "pairCode": "TT",
+      "natalFaction": "T",
+      "annualFaction": "T",
+      "templateZh": "{N}・通向{A}",
+      "templateEn": "{N} toward {A}",
+      "taglineZh": "一个转化引出另一个",
+      "taglineEn": "One transformation opens the next"
+    },
+    "CL": {
+      "pairCode": "CL",
+      "natalFaction": "C",
+      "annualFaction": "L",
+      "templateZh": "{N}的{A}章",
+      "templateEn": "The {A} chapter of {N}",
+      "taglineZh": "去年的作品,今年要被看见和串联",
+      "taglineEn": "Last year's work, this year's audience"
+    },
+    "CT": {
+      "pairCode": "CT",
+      "natalFaction": "C",
+      "annualFaction": "T",
+      "templateZh": "{N}・在{A}里",
+      "templateEn": "{N} inside {A}",
+      "taglineZh": "外面的开拓需要里面的破开",
+      "taglineEn": "The outer build needs an inner break"
+    },
+    "LC": {
+      "pairCode": "LC",
+      "natalFaction": "L",
+      "annualFaction": "C",
+      "templateZh": "{N}之中起{A}",
+      "templateEn": "{A} rising in {N}",
+      "taglineZh": "从对话和共鸣里长出新作品",
+      "taglineEn": "New work rising from dialogue"
+    },
+    "LT": {
+      "pairCode": "LT",
+      "natalFaction": "L",
+      "annualFaction": "T",
+      "templateZh": "{N}里的{A}",
+      "templateEn": "{A} within {N}",
+      "taglineZh": "最深的转化在关系里发生",
+      "taglineEn": "The deepest change happens inside a bond"
+    },
+    "TC": {
+      "pairCode": "TC",
+      "natalFaction": "T",
+      "annualFaction": "C",
+      "templateZh": "{N}之后的{A}",
+      "templateEn": "{A} after {N}",
+      "taglineZh": "沉淀够了,该建造了",
+      "taglineEn": "Enough sinking — time to build"
+    },
+    "TL": {
+      "pairCode": "TL",
+      "natalFaction": "T",
+      "annualFaction": "L",
+      "templateZh": "{N}寻得{A}",
+      "templateEn": "{N} finds {A}",
+      "taglineZh": "再深的潜也要光 / 这一年是光",
+      "taglineEn": "Even the deep dive needs a light"
+    }
+  }
+}

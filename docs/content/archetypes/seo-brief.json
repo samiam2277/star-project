@@ -1,0 +1,256 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2026-05-12",
+  "schema": "see docs/content/archetypes/06-seo-brief.md §11.1",
+
+  "globalTaxonomy": {
+    "headTerms": {
+      "zh": [
+        "占星原型",
+        "灵魂蓝图",
+        "天命原型",
+        "占星 36 原型",
+        "西方占星 人格",
+        "本命盘 解读"
+      ],
+      "en": [
+        "astrology archetype",
+        "soul blueprint",
+        "natal chart archetype",
+        "36 astrology archetypes",
+        "western astrology personality",
+        "birth chart reading"
+      ]
+    },
+    "questionPatterns": {
+      "zh": [
+        "我是什么原型",
+        "{name} 是什么意思",
+        "我是不是 {name}",
+        "{name} 性格特征",
+        "{name} vs {related}",
+        "{sign} 一定是 {name} 吗",
+        "{name} 名人有谁"
+      ],
+      "en": [
+        "what is the {name} archetype",
+        "am I a {name}",
+        "{name} personality traits",
+        "{name} vs {related}",
+        "is every {sign} a {name}",
+        "famous {name} archetypes",
+        "{name} meaning astrology"
+      ]
+    },
+    "excludedTerms": [
+      "算命",
+      "改命",
+      "转运",
+      "最准",
+      "100%",
+      "绝对",
+      "fortune-telling",
+      "guaranteed",
+      "predict your future"
+    ]
+  },
+
+  "perArchetype": {
+    "C01": {
+      "slug": "trailblazer",
+      "faction": "C",
+      "factionNameZh": "创造系",
+      "factionNameEn": "Creation",
+      "themeColor": "#FFB347",
+
+      "canonical": {
+        "zh": "https://stellarlog.com/zh/learn/archetypes/trailblazer",
+        "en": "https://stellarlog.com/en/learn/archetypes/trailblazer"
+      },
+
+      "title": {
+        "zh": "拓荒者 Trailblazer 是什么原型?敢为天下先的灵魂签名 | 星语",
+        "en": "Trailblazer Archetype: The Soul Built to Go First | StellarLog"
+      },
+      "metaDescription": {
+        "zh": "你是天生的开拓者,擅长在没人走过的地方率先迈出第一步。深度解读拓荒者原型的天赋、阴影与进化路径,以及你的本命盘里指向它的占星签名。测你的天命原型 →",
+        "en": "Born to take the first step where no one has walked. Explore the Trailblazer archetype's gifts, shadows, growth path — and the astrology clues in your chart."
+      },
+
+      "primaryKeywords": {
+        "zh": [
+          "拓荒者 原型",
+          "拓荒者 性格",
+          "拓荒型 人格",
+          "白羊座 太阳 性格",
+          "占星 拓荒者",
+          "灵魂蓝图 拓荒者"
+        ],
+        "en": [
+          "trailblazer archetype",
+          "trailblazer personality",
+          "pioneer archetype",
+          "aries sun personality",
+          "trailblazer astrology",
+          "trailblazer soul blueprint"
+        ]
+      },
+      "longTailKeywords": {
+        "zh": [
+          "我是不是拓荒者",
+          "拓荒者原型是什么意思",
+          "太阳白羊上升白羊性格",
+          "占星 36 种原型 拓荒者",
+          "拓荒者和重铸者区别",
+          "白羊座名人 性格",
+          "火象星座 领导力",
+          "火星白羊好吗",
+          "白羊座 太阳 上升 火象",
+          "天生开拓型人格"
+        ],
+        "en": [
+          "am I a trailblazer archetype",
+          "what is the trailblazer archetype meaning",
+          "aries sun aries rising personality",
+          "36 astrology archetypes trailblazer",
+          "trailblazer vs reshaper",
+          "famous aries personalities astrology",
+          "fire sign leadership traits",
+          "aries mars meaning",
+          "aries sun fire ascendant",
+          "natural pioneer personality astrology"
+        ]
+      },
+      "astroKeywords": {
+        "zh": [
+          "太阳白羊",
+          "火星白羊",
+          "上升白羊",
+          "上升狮子",
+          "上升射手",
+          "火象上升",
+          "1宫 火星",
+          "白羊座 火星 性格"
+        ],
+        "en": [
+          "aries sun",
+          "aries mars",
+          "aries rising",
+          "leo rising",
+          "sagittarius rising",
+          "fire ascendant",
+          "1st house mars",
+          "aries mars personality"
+        ]
+      },
+
+      "h1": {
+        "zh": "拓荒者 Trailblazer · 你是天生的开拓者",
+        "en": "Trailblazer · The Soul Built to Go First"
+      },
+      "leadParagraph": {
+        "zh": "你是不是那种「先冲出去再说」的人?别人还在讨论可行性的时候,你已经在路上了。占星上,这种灵魂签名常落在太阳/火星白羊 + 上升火象。在星语 36 天命原型里,我们叫这一型「拓荒者」。这篇文章会告诉你:拓荒者的核心天赋、最容易踩的阴影、你盘里的哪些线索指向它,以及怎么把开拓变成长程力量。",
+        "en": "Are you the \"go first, talk later\" kind of soul? While others debate feasibility, you're already on the move. In astrology, this signature often lives in Aries Sun or Mars with a fire ascendant. StellarLog calls this archetype the Trailblazer. This article walks through its core gifts, common shadows, the astrology clues in your chart pointing to it, and how to turn pioneering into a long-term superpower."
+      },
+
+      "faqs": [
+        {
+          "questionZh": "拓荒者原型是什么意思?",
+          "answerZh": "拓荒者是星语 36 天命原型中 C 创造系第一型,核心特征是「擅长在没人走过的地方率先迈出第一步」。占星签名常见为太阳/火星·白羊 + 上升火象(白羊/狮子/射手)。",
+          "questionEn": "What is the Trailblazer archetype?",
+          "answerEn": "Trailblazer is the first archetype in StellarLog's Creation faction, defined by the gift of taking the first step where no one has walked. The astrology signature usually involves Aries Sun or Mars with a fire ascendant (Aries, Leo, or Sagittarius)."
+        },
+        {
+          "questionZh": "我怎么知道自己是拓荒者?",
+          "answerZh": "对照 5 条信号:独立行动不需要别人认可、把「不可能」听成「还没人试过」、失败恢复快、不耐烦等团队、把停下来误解为停滞。命中 3 条以上大概率是。完整判断需要看本命盘 → 测灵魂蓝图。",
+          "questionEn": "How do I know if I'm a Trailblazer?",
+          "answerEn": "Check these 5 signals: acting independently without approval, hearing 'no one's tried yet' when others say 'impossible,' fast recovery from failure, impatience with team pace, confusing rest with stagnation. If 3 or more fit, you likely are. A natal chart can confirm — take the soul blueprint quiz."
+        },
+        {
+          "questionZh": "白羊座一定是拓荒者吗?",
+          "answerZh": "不一定。太阳白羊只是 primary signal 之一,还要看月亮、上升、火星宫位与相位。约 60% 强白羊能量的人会命中拓荒者,40% 落到 C03 号召者、C08 远征者等其他创造系原型。",
+          "questionEn": "Is every Aries a Trailblazer?",
+          "answerEn": "Not necessarily. Sun in Aries is just one of the primary signals — Moon, Ascendant, Mars house and aspects all matter. About 60% of strong-Aries people land on Trailblazer; the rest fall on C03 Vanguard, C08 Wayfarer, or other Creation archetypes."
+        },
+        {
+          "questionZh": "拓荒者和重铸者(C09)的区别?",
+          "answerZh": "拓荒者是从 0 到 1 — 没有路就开一条;重铸者是把已存在的东西推倒重来。两者都「敢」,但拓荒者向外开拓,重铸者向内焚毁。",
+          "questionEn": "Trailblazer vs Reshaper (C09): what's the difference?",
+          "answerEn": "Trailblazer goes from 0 to 1 — opening a path where none exists. Reshaper tears down what already exists to forge it anew. Both are bold, but Trailblazer builds outward, Reshaper burns inward."
+        },
+        {
+          "questionZh": "有哪些名人是拓荒者?",
+          "answerZh": "强拓荒者能量的公众人物包括:史蒂夫·乔布斯(白羊月 + 5宫太阳)、维森特·梵高(部分签名)、玛丽亚·凯莉式开拓型音乐人。完整名人盘对照见星语盲测库。",
+          "questionEn": "Who are some famous Trailblazers?",
+          "answerEn": "Public figures with strong Trailblazer signatures include Steve Jobs (Aries Moon + 5th-house Sun), parts of Vincent van Gogh's chart, and other pioneering creators. See StellarLog's celebrity chart library for the full mapping."
+        }
+      ],
+
+      "internalLinks": {
+        "siblings": ["C03", "C08", "C09"],
+        "opposites": ["L05", "T01"],
+        "glossary": ["sun-sign", "mars-sign", "ascendant", "fire-element"]
+      },
+      "anchorTexts": {
+        "C03": {
+          "zh": "集结众人冲锋的号召者",
+          "en": "the Vanguard who rallies the charge"
+        },
+        "C08": {
+          "zh": "把开拓做成长征的远征者",
+          "en": "the Wayfarer who turns trailblazing into a long march"
+        },
+        "C09": {
+          "zh": "焚毁旧框架的重铸者",
+          "en": "the Reshaper who burns down old frames"
+        },
+        "L05": {
+          "zh": "你的互补面:守护者",
+          "en": "your complement: the Guardian"
+        },
+        "T01": {
+          "zh": "与你形成镜像的深潜者",
+          "en": "your mirror: the Deep Diver"
+        }
+      },
+      "ctaLinks": [
+        {
+          "url": "/blueprint/start",
+          "anchorZh": "测一下你的灵魂蓝图,看你是不是拓荒者",
+          "anchorEn": "Take the soul blueprint quiz — find out if you're a Trailblazer",
+          "priority": "primary"
+        },
+        {
+          "url": "/learn/archetypes",
+          "anchorZh": "返回 36 原型百科总览",
+          "anchorEn": "Back to all 36 archetypes",
+          "priority": "secondary"
+        }
+      ],
+
+      "ogImage": {
+        "pathZh": "/og/archetypes/trailblazer-zh.png",
+        "pathEn": "/og/archetypes/trailblazer-en.png",
+        "altZh": "拓荒者 Trailblazer 原型卡 · 暖琥珀色",
+        "altEn": "Trailblazer archetype card · Warm amber",
+        "bgGradient": ["#FFB347", "#1A1B3A"],
+        "symbol": "▲",
+        "width": 1200,
+        "height": 630
+      },
+
+      "lengthTargets": {
+        "zh": 1800,
+        "en": 900
+      },
+
+      "structuredData": {
+        "articleType": "Article",
+        "includeFaqPage": true,
+        "includeBreadcrumb": true,
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-05-12"
+      }
+    }
+  }
+}
