@@ -13,6 +13,7 @@
     "lint": "next lint"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.11",
     "@types/node": "^22.0.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
