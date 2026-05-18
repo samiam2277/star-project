@@ -18,5 +18,88 @@
   },
   "blueprint": {
     "title": "我的灵魂蓝图"
+  },
+  "onboarding": {
+    "title": "我的出生信息",
+    "stepDate": "生日",
+    "stepTime": "时间",
+    "stepPlace": "地点",
+    "next": "下一步",
+    "back": "返回",
+    "finish": "查看我的星盘",
+    "birthDate": {
+      "title": "你是哪天来到这个世界的？",
+      "subtitle": "公历日期，准确到日",
+      "label": "出生日期",
+      "errorRange": "请选择 1920 年至今的日期",
+      "errorRequired": "请选择出生日期"
+    },
+    "birthTime": {
+      "title": "几点出生？",
+      "subtitle": "时间影响上升星座与宫位",
+      "label": "出生时间",
+      "unknownLabel": "我不知道出生时间",
+      "unknownHint": "我们会用太阳 × 月亮估算你的原型（上升与宫位将缺失）"
+    },
+    "birthPlace": {
+      "title": "你在哪里出生？",
+      "subtitle": "出生地决定时区与上升星座",
+      "label": "出生城市",
+      "placeholder": "请选择城市",
+      "unknownLabel": "我不知道出生地",
+      "unknownHint": "我们会用默认时区估算（误差可能较大）",
+      "missing": "找不到？暂时选最接近的大城市，后续可在「我」里修改"
+    },
+    "missingBirthData": "我们还需要你的出生信息",
+    "goBack": "回到 Onboarding"
+  },
+  "chart": {
+    "title": "我的本命盘",
+    "loading": "正在推算行星位置……",
+    "error": "星盘计算失败",
+    "retry": "重试",
+    "missingData": "缺少出生信息",
+    "completeOnboarding": "完成出生信息采集",
+    "planet": {
+      "sun": "太阳",
+      "moon": "月亮",
+      "mercury": "水星",
+      "venus": "金星",
+      "mars": "火星",
+      "jupiter": "木星",
+      "saturn": "土星",
+      "uranus": "天王星",
+      "neptune": "海王星",
+      "pluto": "冥王星",
+      "northNode": "北交点",
+      "chiron": "凯龙",
+      "asc": "上升",
+      "mc": "天顶"
+    },
+    "sign": {
+      "Aries": "白羊",
+      "Taurus": "金牛",
+      "Gemini": "双子",
+      "Cancer": "巨蟹",
+      "Leo": "狮子",
+      "Virgo": "处女",
+      "Libra": "天秤",
+      "Scorpio": "天蝎",
+      "Sagittarius": "射手",
+      "Capricorn": "摩羯",
+      "Aquarius": "水瓶",
+      "Pisces": "双鱼"
+    },
+    "sheet": {
+      "longitude": "黄经",
+      "house": "第 {n} 宫",
+      "noHouse": "宫位未知",
+      "retrograde": "逆行",
+      "close": "关闭"
+    },
+    "info": {
+      "noHouses": "未提供出生时间或地点，上升与宫位将缺失",
+      "interact": "拖拽旋转 · 双指缩放"
+    }
   }
 }

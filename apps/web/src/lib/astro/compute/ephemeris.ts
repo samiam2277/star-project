@@ -60,6 +60,9 @@ let initPromise: Promise<SwephRuntime> | null = null;
 /**
  * 初始化 WASM Swiss Ephemeris 单例。
  * 幂等:重复调用会复用同一实例。
+ *
+ * 浏览器端:WASM/.data 从 /wasm/ 路径加载(public 目录)。
+ * Node 端:使用 swisseph-wasm 内置路径。
  */
 export async function initEphemeris(): Promise<SwephRuntime> {
   if (runtime) return runtime;
@@ -68,7 +71,30 @@ export async function initEphemeris(): Promise<SwephRuntime> {
   initPromise = (async () => {
     const SweCtor = SwissEph as unknown as new () => SwephRuntime;
     const instance = new SweCtor();
-    await instance.initSwissEph();
+
+    if (typeof window !== 'undefined') {
+      // 浏览器端:动态 import 底层 WASM 模块,传入 locateFile 指向 public/wasm/
+      const WasmMod = await import('./wasm-core.js');
+      const WasmSwissEph = WasmMod.default;
+      const moduleConfig = {
+        locateFile: (path: string) => `/wasm/${path}`,
+      };
+      (instance as any).SweModule = await WasmSwissEph(moduleConfig);
+      if (!(instance as any).SweModule.HEAP32) {
+        (instance as any).SweModule.HEAP32 = new Int32Array(
+          (instance as any).SweModule.HEAPF64.buffer,
+        );
+      }
+      (instance as any).SweModule.ccall(
+        'swe_set_ephe_path',
+        'string',
+        ['string'],
+        ['sweph'],
+      );
+    } else {
+      await instance.initSwissEph();
+    }
+
     runtime = instance;
     return instance;
   })();

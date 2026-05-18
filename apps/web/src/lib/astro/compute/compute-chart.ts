@@ -120,3 +120,84 @@ export async function computeChart(birth: BirthData): Promise<AstroInput> {
 
   return input;
 }
+
+export interface NatalChartResult {
+  input: AstroInput;
+  /** 各行星/ASC/MC 的黄经(度) */
+  lons: Partial<Record<Planet, number>>;
+  /** 12 宫头黄经(仅含完整出生数据时非 null) */
+  cusps: readonly number[] | null;
+}
+
+/**
+ * 扩展版:除 AstroInput 外,还返回原始黄经与宫位头,供 3D 星盘渲染使用。
+ */
+export async function computeNatalChart(birth: BirthData): Promise<NatalChartResult> {
+  await initEphemeris();
+
+  const { jd, birthTimeKnown } = birthStringToJulianDay(
+    birth.date,
+    birth.time,
+    birth.utcOffsetHours,
+  );
+
+  const planets = planetPositions(jd);
+
+  const canComputeHouses =
+    birth.lat !== undefined && birth.lon !== undefined && birthTimeKnown;
+  const birthLocationKnown =
+    birth.lat !== undefined && birth.lon !== undefined;
+
+  let cusps: readonly number[] | null = null;
+  let ascLon: number | null = null;
+  let mcLon: number | null = null;
+
+  if (canComputeHouses) {
+    const h = houses(jd, birth.lat!, birth.lon!);
+    cusps = h.cusps;
+    ascLon = h.asc;
+    mcLon = h.mc;
+  }
+
+  const lons: Partial<Record<Planet, number>> = {};
+  const positionFor = (planet: EphemerisPlanet): PlanetPosition => {
+    const p = planets[planet];
+    lons[planet] = p.lon;
+    return {
+      sign: signOf(p.lon),
+      house: cusps ? houseOf(p.lon, cusps) : undefined,
+      degree: degreeInSign(p.lon),
+      retrograde: p.retrograde,
+    };
+  };
+
+  const input: AstroInput = {
+    sun: positionFor('sun'),
+    moon: positionFor('moon'),
+    mercury: positionFor('mercury'),
+    venus: positionFor('venus'),
+    mars: positionFor('mars'),
+    jupiter: positionFor('jupiter'),
+    saturn: positionFor('saturn'),
+    uranus: positionFor('uranus'),
+    neptune: positionFor('neptune'),
+    pluto: positionFor('pluto'),
+    northNode: positionFor('northNode'),
+    aspects: [],
+    birthTimeKnown,
+    birthLocationKnown,
+  };
+
+  if (ascLon !== null) {
+    input.asc = { sign: signOf(ascLon), degree: degreeInSign(ascLon) };
+    lons.asc = ascLon;
+  }
+  if (mcLon !== null) {
+    input.mc = { sign: signOf(mcLon), degree: degreeInSign(mcLon) };
+    lons.mc = mcLon;
+  }
+
+  input.aspects = detectAspects(lons);
+
+  return { input, lons, cusps };
+}

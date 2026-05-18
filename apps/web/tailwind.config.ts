@@ -81,6 +81,27 @@ const config: Config = {
         toast: '60',
         debug: '9999',
       },
+      transitionDuration: {
+        instant: '80ms',
+        fast: '150ms',
+        base: '250ms',
+        slow: '400ms',
+        dramatic: '800ms',
+      },
+      transitionTimingFunction: {
+        'out-soft': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'in-soft': 'cubic-bezier(0.7, 0, 0.84, 0)',
+        mystic: 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      keyframes: {
+        'dash-flow': {
+          '0%': { strokeDashoffset: '0' },
+          '100%': { strokeDashoffset: '-20' },
+        },
+      },
+      animation: {
+        'dash-flow': 'dash-flow 2s linear infinite',
+      },
     },
   },
   plugins: [],

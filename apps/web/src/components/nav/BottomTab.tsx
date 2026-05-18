@@ -61,6 +61,7 @@ export const BottomTab = React.memo(function BottomTab() {
             {active && (
               <span className="absolute top-0 h-0.5 w-6 rounded-full bg-accent-gold" />
             )}
+            {/* @ts-ignore — lucide-react v1 + React 19 type mismatch */}
             <Icon size={24} strokeWidth={active ? 2 : 1.5} />
             <span className="text-micro">{tab.label}</span>
           </Link>

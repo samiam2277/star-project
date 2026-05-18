@@ -18,5 +18,88 @@
   },
   "blueprint": {
     "title": "My Soul Blueprint"
+  },
+  "onboarding": {
+    "title": "My Birth Info",
+    "stepDate": "Date",
+    "stepTime": "Time",
+    "stepPlace": "Place",
+    "next": "Next",
+    "back": "Back",
+    "finish": "View My Chart",
+    "birthDate": {
+      "title": "What day did you arrive?",
+      "subtitle": "Gregorian calendar, exact to the day",
+      "label": "Date of birth",
+      "errorRange": "Please choose a date between 1920 and today",
+      "errorRequired": "Please choose your date of birth"
+    },
+    "birthTime": {
+      "title": "At what time were you born?",
+      "subtitle": "Time determines your Ascendant and houses",
+      "label": "Time of birth",
+      "unknownLabel": "I don't know my birth time",
+      "unknownHint": "We'll estimate using Sun × Moon (Ascendant and houses will be missing)"
+    },
+    "birthPlace": {
+      "title": "Where were you born?",
+      "subtitle": "Birthplace sets the timezone and Ascendant",
+      "label": "Birth city",
+      "placeholder": "Choose a city",
+      "unknownLabel": "I don't know my birthplace",
+      "unknownHint": "We'll use a default timezone (may be inaccurate)",
+      "missing": "Can't find it? Pick the closest major city for now; you can edit later in Me."
+    },
+    "missingBirthData": "We still need your birth info",
+    "goBack": "Back to Onboarding"
+  },
+  "chart": {
+    "title": "My Natal Chart",
+    "loading": "Computing planet positions…",
+    "error": "Chart computation failed",
+    "retry": "Retry",
+    "missingData": "Birth info missing",
+    "completeOnboarding": "Complete onboarding",
+    "planet": {
+      "sun": "Sun",
+      "moon": "Moon",
+      "mercury": "Mercury",
+      "venus": "Venus",
+      "mars": "Mars",
+      "jupiter": "Jupiter",
+      "saturn": "Saturn",
+      "uranus": "Uranus",
+      "neptune": "Neptune",
+      "pluto": "Pluto",
+      "northNode": "North Node",
+      "chiron": "Chiron",
+      "asc": "Ascendant",
+      "mc": "Midheaven"
+    },
+    "sign": {
+      "Aries": "Aries",
+      "Taurus": "Taurus",
+      "Gemini": "Gemini",
+      "Cancer": "Cancer",
+      "Leo": "Leo",
+      "Virgo": "Virgo",
+      "Libra": "Libra",
+      "Scorpio": "Scorpio",
+      "Sagittarius": "Sagittarius",
+      "Capricorn": "Capricorn",
+      "Aquarius": "Aquarius",
+      "Pisces": "Pisces"
+    },
+    "sheet": {
+      "longitude": "Longitude",
+      "house": "House {n}",
+      "noHouse": "House unknown",
+      "retrograde": "Retrograde",
+      "close": "Close"
+    },
+    "info": {
+      "noHouses": "Birth time or location missing — Ascendant and houses unavailable",
+      "interact": "Drag to rotate · pinch to zoom"
+    }
   }
 }
